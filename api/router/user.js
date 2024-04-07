@@ -1,7 +1,5 @@
 const router = require("express").Router();
 require("dotenv").config();
-const Helper = require("../helper");
-const Joi = require("joi");
 const {
   login,
   verifyOtp,

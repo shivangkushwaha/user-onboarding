@@ -1,12 +1,12 @@
 const Models = require('../models');
 const MD5 = require('md5');
-const { generateAccessToken } = require('../helper');
-const helper = require('../helper');
+const { generateAccessToken } = require('../../helper');
+const helper = require('../../helper');
 const { v4: uuidv4 } = require('uuid');
-const errorMessages = require('../config/errorMessages.json');
-const successMessages = require('../config/successMessages.json');
-const logger = require('../utils/winston');
-const appConstant = require('../appConstant');
+const errorMessages = require('../../config/errorMessages.json');
+const successMessages = require('../../config/successMessages.json');
+const logger = require('../../utils/winston');
+const appConstant = require('../../appConstant');
 const {sendServerErrorResponse, sendSucessResponse, sendBadResponse } = require('./response.controller');
 
 module.exports = {
