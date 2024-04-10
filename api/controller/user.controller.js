@@ -188,10 +188,6 @@ module.exports = {
       /** Check user Status for send OTP */
       let user = await Models.User.findOne({ where: { phone, countryCode } });
       if(user) {
-        // if (user.isTokenExpire === appConstant.USER_ACCOUNT_STATUS.TOKEN_EXPIRED)
-        //   return sendBadResponse(res, "Session expired please login again");
-        // else if (user.status === appConstant.USER_ACCOUNT_STATUS.ACCOUNT_DEACTIVATED)
-        //   return sendBadResponse(res, "Your account has been deactivated");
         if (user.status === appConstant.USER_ACCOUNT_STATUS.ACCOUNT_DEACTIVATED_BY_ADMIN)
           return sendBadResponse(res, "Account is locked by administrator");
       }

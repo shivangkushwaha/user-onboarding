@@ -109,7 +109,8 @@ module.exports = {
       console.error(`Error in genetareKey function :`, error);
       throw new Error(error);
     }
-  }
+  },
+  
 };
 
 // Signing Information With Private Key
